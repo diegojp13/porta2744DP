@@ -1,0 +1,155 @@
+*{
+   margin:0px;
+   padding: 0; 
+}
+
+html{
+    background-color: aquamarine;
+    scroll-behavior: smooth;
+}
+#contedor{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+#encabezado{
+    width: 100%;
+    height: 100%;
+    display: table;
+    background-color:white;
+}
+
+.imagen{
+    border-radius: 20px;
+    display: inline-block;
+    margin: auto;
+}
+.imagen:hover{
+    border-radius: 0;
+}
+
+#pie{
+    width: 100%;
+    height: 50px;
+    display: table;
+    background-color: white;
+    text-align: center;
+    color: #000000;
+    padding-top: 1%;
+}
+
+#who{
+    justify-content: center;
+    text-justify: auto;
+    display: table;
+    width: 100%;
+    height: 500px;
+    background-color: burlywood;
+}
+
+#emp{
+    justify-content: center;
+    text-justify: auto;
+    display: table;
+    width: 100%;
+    height: 500px;
+    background-color:cornflowerblue;
+}
+
+#emp h1{
+    text-align: center;
+   
+}
+
+#pro{
+    justify-content: center;
+    text-justify: auto;
+    display: table;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+}
+
+#pro h3{
+    text-align: center;
+}
+
+#pro img{
+    display: block;
+    margin: auto;
+    border-radius: 50px;
+}
+
+
+#insp{
+    justify-content: center;
+    text-justify: auto;
+    display: table;
+    width: 100%;
+    height: 500px;
+    background-color: burlywood;
+}
+
+.letra{
+    text-align: center;
+}
+
+#cont{
+    justify-content: center;
+    text-justify: auto;
+    display: table;
+    width: 100%;
+    height: 500px;
+    background-color: cornflowerblue;
+}
+
+#nav{
+    margin-left: ;
+    display: table;
+    width: 100%;
+    background-color: cadetblue; 
+}
+#nav ol{
+    display: inline-flex;
+    float: right;
+}
+#nav li{
+    list-style: none;
+    padding: 10px 10px;
+    border-left: 1px solid #000000;
+    display: table;
+}
+
+
+#nav li a{
+    text-decoration: none;
+    color:#ffffff;
+    padding: 10px 10px;
+
+}
+
+#nav li:hover{
+    background-color: coral;
+    color:#ffffff;
+    
+}
+
+.formulario{
+    text-align:center;
+ }
+
+
+.flotante {
+    display:scroll;
+        position:fixed;
+        bottom:110px;
+        right:60px;
+}
+
+.flotante2 {
+    display:scroll;
+        position:fixed;
+        bottom:110px;
+        left:10px;
+}

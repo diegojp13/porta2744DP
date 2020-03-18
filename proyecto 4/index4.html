@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Vintage Store</title>
+    <script>
+        var current = 0;
+        var imagenes = new Array();
+         
+        $(document).ready(function() {
+            var numImages = 6;
+            if (numImages <= 3) {
+                $('.right-arrow').css('display', 'none');
+                $('.left-arrow').css('display', 'none');
+            }
+         
+            $('.left-arrow').on('click',function() {
+                if (current > 0) {
+                    current = current - 1;
+                } else {
+                    current = numImages - 3;
+                }
+         
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+         
+                return false;
+            });
+         
+            $('.left-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+         
+            $('.right-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+         
+            $('.right-arrow').on('click', function() {
+                if (numImages > current + 3) {
+                    current = current+1;
+                } else {
+                    current = 0;
+                }
+         
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+         
+                return false;
+            }); 
+         });
+        </script>
+</head>
+
+<body>
+    <div id="encabezado">
+        <p>
+            Vintage Store
+        </p>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#quienes">Quienes Somos</a></li>
+            <li><a href="#carrusel">Carrusel</a></li>
+            <li><a href="#contacto">contacto</a> </li>
+            <li><a href="#pie">EndPage</a></li>
+        </ul>
+    </div>
+    <div class="quienes">
+        <div align="center">
+            <img src="img/who.jpg" width="500" height="300"> </div>
+        <h1>
+            ¿Quienes somos?
+        </h1>
+        <p>
+            Somos una empresa comercializadora de productos vintage que distribuye sus productos alrrededor de todo el mundo,
+             nuestro objetivo es brindarle a nuestro consumidor lo mas representativo de las ultimas 5 decadas al mejor precio. Ademas de dar 
+             informacion historica de nuestros productos.
+        </p>
+    </div>
+    <div class="row">
+        <div id="content" class="col-sm-8">
+        <div id="carrusel">
+            <a href="#" class="left-arrow"><img src="img/left.png" width="30" height="30" /></a>
+            <a href="#" class="right-arrow"><img src="img/right.png" width="30" height="30" /></a>
+            <div class="carrusel">
+                <div class="product" id="product_0">
+                    <a href="#"><img src="img/vintlog.jpg"  width="295" height="250" /></a>
+                    <h5>Nosotros</h5>
+                    <p>¡Descubre mas de nuestra marca!</p>
+                </div>
+                <div class="imagen" id="product_1">
+                    <a href="#"><img src="img/vint1.jpg" width="295" height="200" /></a>
+                    <h5>Anuncios</h5>
+                    <p>Tenemos para ti los mas iconicos anuncios de la decada de los 80s y 90s</p>
+                </div>
+                <div class="imagen" id="product_2">
+                    <a href="#"><img src="img/vint2.webp" width="295" height="200" /></a>
+                    <h5>Antiguedades</h5>
+                    <p>Contamos con los artilugios con mas repercusion en la historia en el mundo</p>
+                </div>
+                <div class="imagen" id="product_3">
+                    <a href="#"><img src="img/vint3.jpg" width="295" height="200" /></a>
+                    <h5>Carros</h5>
+                    <p>BMW, VolksWagen, Ferrari, y muchas mas son las marcas de nuestra coleccion que marcaron tendencia</p>
+                </div>
+                <div class="imagen" id="product_4">
+                    <a href="#"><img src="img/vint4.jpg" width="295" height="200" /></a>
+                    <h5>Decoraciones</h5>
+                    <p>Contacta a nuestros decoradores para los mejores styles de todos los tiempos</p>
+                </div>
+                <div class=imagen" id="product_5">
+                    <a href="#"><img src="img/vint.jpg" width="295" height="200" /></a>
+                    <h5>Museo</h5>
+                    <p>Contamos con una seleccion de artilugios valiosos (NO venta) de la historia mundial</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="contacto">
+            <h1>
+                Contactos
+            </h1>
+
+            <p>
+                <center>Puedes enviarnos tu opinion y analizaremos tu peticion o queja para responderte lo
+                    antes posible y satifascer tu necesidad.</center>
+            </p>
+
+            <form action="" class="formulario" method="POST">
+                <center>
+                    <label>Ingrese su correo</label>
+                    <input type="email" class="form-control" placeholder="Correo:" required="">
+                    <br>
+                    <label>Ingrese su mensaje</label>
+                    <textarea class="form-control" placeholder="Mensaje:"></textarea>
+                    <br>
+                    <input type="submit">
+                </center>
+            </form>
+        </div>
+    
+        
+                    <div id="pie">
+                        &copy; Parente 2020. Todos los derechos reservados. Cualquier tipo de plagio sera penado por la ley #maricoelquelolea
+                    </div>
+                    <div id="fb">
+                        <a href="#">
+                            <div class="icono"><a href="https://www.facebook.com/"><img src="img/fb.png" alt=""></a></div>
+                        </a>
+                    </div>
+                    <div id="tw">
+                        <a href="#">
+                            <div class="icono"><a href="https://www.twitter.com/"><img src="img/tw.png" alt=""></a></div>
+                        </a>
+                    </div>
+                    <div id="ins">
+                        <a href="#">
+                            <div class="icono"><a href="https://www.google.com/"><img src="img/go.png" alt=""></a></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
